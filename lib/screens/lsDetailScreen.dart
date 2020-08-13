@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:smls/screens/mandirListScreen.dart';
 
 // ignore: camel_case_types
 class lsDetailScreen extends StatefulWidget {
@@ -14,6 +15,8 @@ class lsDetailScreen extends StatefulWidget {
 class _lsDetailScreenState extends State<lsDetailScreen> {
   bool check = false;
   bool _isLoad = false;
+  var value;
+
 
   String _paytypeVal = "CASH";
   List<String> _paytypeList = ["CASH", "NEFT", "CRCARD", "UPI"];
@@ -46,6 +49,7 @@ class _lsDetailScreenState extends State<lsDetailScreen> {
       poojaOwnerAddress = "",
       totalPrasadam = "",
       trnType = "",
+      mandirName = "",
       status = "",
       recieptNo = "",
       payInvoiceNo = "",
@@ -194,6 +198,7 @@ class _lsDetailScreenState extends State<lsDetailScreen> {
       poojaOwnerAddress = _lsDetails["poojaOwnerAddress"];
       totalPrasadam = _lsDetails["totalPrasadam"];
       trnType = _lsDetails["trnType"];
+      mandirName = _lsDetails["mandirName"];
       status = _lsDetails["status"];
       recieptNo = _lsDetails["recieptNo"];
       payInvoiceNo = _lsDetails["payInvoiceNo"];
@@ -395,6 +400,38 @@ class _lsDetailScreenState extends State<lsDetailScreen> {
                           child: Text(value),
                         );
                       }).toList(),
+                    ),
+                    TextFormField(
+                      readOnly: true,
+                      initialValue: mandirName,
+                      decoration: InputDecoration(labelText: "Mandir Name"),
+                      onChanged: (val) {
+                        mandirName = val;
+                      },
+                    ),
+                    SizedBox(
+                      height: _mediaQuery.height * 0.02,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      child: RaisedButton(
+                        onPressed: () async {
+                          value = await Navigator.of(context)
+                              .pushNamed(mandirListScreen.routeName);
+                          print(value);
+                          setState(() {
+                            mandirId=value;
+                          });
+                        },
+                        color: _primaryColor,
+                        child: Text(
+                          "CHANGE MANDIR",
+                          style: GoogleFonts.nunitoSans(color: _accentColor),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: _mediaQuery.height * 0.02,
                     ),
                     SizedBox(
                       height: _mediaQuery.height * 0.02,

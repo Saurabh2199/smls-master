@@ -13,6 +13,7 @@ import 'package:smls/screens/lsDetailScreen.dart';
 import 'package:smls/screens/lsScreen.dart';
 import 'package:smls/screens/mainScreen.dart';
 import 'package:smls/screens/fPrasadDisplayScreen.dart';
+import 'package:smls/screens/mandirListScreen.dart';
 import 'package:smls/screens/prasadSelectScreen.dart';
 import 'package:smls/screens/rPrasadDisplayScreen.dart';
 import 'package:smls/screens/splashScreen.dart';
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
           PrasadSelectScreen.routeName:(ctx)=>PrasadSelectScreen(),
           FPrasadDisplayScreen.routeName:(ctx)=>FPrasadDisplayScreen(),
           RPrasadDisplayScreen.routeName:(ctx)=>RPrasadDisplayScreen(),
+          mandirListScreen.routeName:(ctx)=>mandirListScreen(),
         },
       ),
     );
