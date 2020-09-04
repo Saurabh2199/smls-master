@@ -260,9 +260,7 @@ class _lsDetailScreenState extends State<lsDetailScreen> {
                     TextFormField(
                       initialValue: mandirId,
                       decoration: InputDecoration(labelText: "ID"),
-                      onChanged: (val) {
-                        mandirId = val;
-                      },
+                      enabled: false,
                     ),
                     SizedBox(
                       height: _mediaQuery.height * 0.02,
