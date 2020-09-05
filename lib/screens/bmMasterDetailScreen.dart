@@ -425,7 +425,7 @@ class _bmMasterDetailScreenState extends State<bmMasterDetailScreen> {
                 }).toList(),
               ),
               SizedBox(height: _mediaQuery.height*0.02,),
-              Align(alignment: Alignment.bottomLeft,child: Text("Bhajan Mandali Incharge-2", style: GoogleFonts.nunitoSans(color: Color(0xffD2691E)),)),
+              Align(alignment: Alignment.bottomLeft,child: Text("Bhajan Mandali Incharge-1", style: GoogleFonts.nunitoSans(color: Color(0xffD2691E)),)),
               TextFormField(
                 initialValue: inchargePerson,
                 decoration: InputDecoration(labelText: "Incharge Name"),

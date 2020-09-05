@@ -259,7 +259,7 @@ class _lsDetailScreenState extends State<lsDetailScreen> {
                     ),
                     TextFormField(
                       initialValue: mandirId,
-                      decoration: InputDecoration(labelText: "ID"),
+                      decoration: InputDecoration(labelText: "Mandir ID"),
                       enabled: false,
                     ),
                     SizedBox(

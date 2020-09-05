@@ -7,6 +7,7 @@ import 'package:smls/screens/bmMemberDetailScreen.dart';
 import 'package:smls/screens/bmMemberScreen.dart';
 import 'package:smls/screens/bmMasterScreen.dart';
 import 'package:smls/screens/controlScreen.dart';
+import 'package:smls/screens/excelExport.dart';
 import 'package:smls/screens/loginScreen.dart';
 import 'package:smls/screens/lsAddScreen.dart';
 import 'package:smls/screens/lsDetailScreen.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'SMLS',
+        title: 'SMLS',debugShowCheckedModeBanner: false,
         theme: ThemeData(
           accentColor: Color(0xffFFF8DC),
           primaryColor: Color(0xff8B4513),
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
           FPrasadDisplayScreen.routeName:(ctx)=>FPrasadDisplayScreen(),
           RPrasadDisplayScreen.routeName:(ctx)=>RPrasadDisplayScreen(),
           mandirListScreen.routeName:(ctx)=>mandirListScreen(),
+          ExcelExportScreen.routeName:(ctx)=>ExcelExportScreen(),
         },
       ),
     );

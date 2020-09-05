@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smls/screens/bmMasterScreen.dart';
+import 'package:smls/screens/excelExport.dart';
 import 'package:smls/screens/lsScreen.dart';
 import 'package:smls/screens/prasadSelectScreen.dart';
 import 'package:smls/screens/userDisplayScreen.dart';
@@ -94,7 +95,8 @@ class _MainScreenState extends State<MainScreen> {
             _getCard("Prasadam Update", FontAwesome5.calendar_check, (){
               Navigator.of(context).pushNamed(PrasadSelectScreen.routeName);
             }),
-            _getCard("Laxmi Shobhane Report", FontAwesome5.address_book, (){
+            _getCard("Excel Export", FontAwesome5.address_book, (){
+              Navigator.of(context).pushNamed(ExcelExportScreen.routeName);
             }),
           ],
         ),
